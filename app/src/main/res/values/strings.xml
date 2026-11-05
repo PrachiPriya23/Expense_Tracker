@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TripExpense</string>
+    <string name="tab_expenses">Expenses</string>
+    <string name="tab_add">Add Expense</string>
+    <string name="tab_summary">Summary</string>
+</resources>

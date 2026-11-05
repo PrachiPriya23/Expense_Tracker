@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/primary">
+
+    <!-- Header Toolbar / Banner -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/btnSetBudget">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TripExpense"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tvHeaderSubBudget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spent: ₹0.00 / Budget: ₹5000.00"
+                android:textSize="13sp"
+                android:textColor="#D1E8E2"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSetBudget"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Set Budget"
+            android:textSize="12sp"
+            android:textColor="@color/primary"
+            app:backgroundTint="@color/white"
+            app:icon="@drawable/ic_budget"
+            app:iconTint="@color/primary"
+            app:iconSize="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingHorizontal="12dp" />
+
+    </RelativeLayout>
+
+    <!-- Budget Alert Warning Banner (Visible if total spent > budget) -->
+    <LinearLayout
+        android:id="@+id/llBudgetWarningBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/alert_red"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvBudgetWarningText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚠️ Warning: Total spent exceeds your trip budget!"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Navigation Tabs -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabBackground="@color/primary"
+        app:tabTextColor="#B2D8D8"
+        app:tabSelectedTextColor="@color/white"
+        app:tabIndicatorColor="@color/secondary"
+        app:tabIndicatorHeight="3dp"
+        app:tabMode="fixed"
+        app:tabGravity="fill" />
+
+    <!-- ViewPager for Tab Contents -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_light" />
+
+</LinearLayout>
