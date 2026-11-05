@@ -23,7 +23,10 @@
 
 | Expenses List | Add Expense & Proof | Summary Breakdown |
 | :---: | :---: | :---: |
-| ![Expenses List](screenshots/expenses_list.png) | ![Add Expense](screenshots/add_expense.png) | ![Summary Screen](screenshots/summary.png) |
+| ![Expenses List](<img width="1080" height="2344" alt="mad 1" src="https://github.com/user-attachments/assets/d2786b56-442c-4d04-8813-60ece570f48e" />
+) | ![Add Expense](<img width="1080" height="2344" alt="mad3" src="https://github.com/user-attachments/assets/5a53cfc1-ad99-4503-944f-8c4b8f9921d0" />
+) | ![Summary Screen](<<img width="1080" height="2344" alt="mad2" src="https://github.com/user-attachments/assets/4ccfe30a-944e-41b0-b9ec-997476489ccf" />
+) |
 
 ---
 
@@ -34,14 +37,3 @@
 - **Database**: Android SQLite (`SQLiteOpenHelper`)
 - **Storage**: Internal App Storage (`filesDir/payment_proofs`) for robust URI/file persistence
 - **Min SDK**: 24+
-
----
-
-## ⚙️ Setup & Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/TripExpense.git
-   ```
-2. Open the project in **Android Studio**.
-3. Sync Gradle and run the app on an Android emulator or physical device (API 24 or higher).
